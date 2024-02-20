@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .flex-container {
+        width: 100vw;
+        height: 200px;
+        background-color: dodgerblue;
+        /* 화면 크기가 작아지면 아래로 배치
+            기본 설정 값은 no-wrap
+        */
+        flex-wrap: wrap;
+        display: flex;
+        /* item을 가로로 배치하고 싶으면 item 부모 요소인 container에 flex를 설정한다. */
+        /* flex방향은 기본적으로 row
+        내가 세로로 배치하고 싶으면 flex-direction에 column을 사용하면 됌*/
+        flex-direction: row;
+        /* align-items: center; */
+        /* justify-content: flex-start; */
+        /* 
+        justify : 메인축(가로축)
+        가운데 정렬: center(*)
+        오른쪽 끝: flex-end 
+        왼쪽 끝: flex-start.       
+        */
+      }
+      .flex-container > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        font-size: 30px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flex 수업</h1>
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+    </div>
+  </body>
+</html>

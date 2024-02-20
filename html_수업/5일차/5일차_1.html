@@ -10,7 +10,48 @@
         margin: 0;
         box-sizing: border-box;
       }
+      .px-box {
+        width: 200px;
+        height: 100px;
+        border: 1px solid black;
+      }
+      .percent-box {
+        border: 1px solid black;
+        width: 50%;
+        height: 50%;
+      }
+      .vh-box {
+        border: 1px solid black;
+        height: 100vh;
+      }
+      .em-parent {
+        font-size: 30px;
+      }
+      .em-child {
+        font-size: 2em;
+      }
     </style>
   </head>
-  <body></body>
+  <body>
+    <!-- 
+        단위
+        1. px: 절대 단위
+        2. %: 부모 요소를 기준으로 %단위로 지정
+        3. vh: vieport height의 축약어> viewport > 웹 브라우저.
+            1vh == 1%를 의미
+        4. vw: Viewport Width의 축약어, viewport > 웹 브라우저.
+        vh, vw는 배경화면 구현할 때 종종 사용
+        5. em: 부모 요소에 곱하기 값이 단위로 환산
+
+        결론: em하고 퍼센트를 실무에서 많이 사용.
+        / -->
+    <div class="px-box">
+      <div class="percent-box"></div>
+    </div>
+    <!-- <div class="vh-box"></div> -->
+    <div class="em-parent">
+      안녕하세요.
+      <div class="em-child">안녕하세요.</div>
+    </div>
+  </body>
 </html>
