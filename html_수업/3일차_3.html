@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: 200px;
+        background-color: cornflowerblue;
+        /* flexible, 유연한 */
+        display: flex;
+        /* justify 가로축 align 세로축 */
+        justify-content: space-between;
+      }
+      .container > div {
+        background-color: aliceblue;
+        width: 150px;
+        /* inline-bolck은 실무에서 사용하지 않는다. */
+        /* margin: 10px; */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- margin, padding / flex / position -->
+    <!-- 
+        Flex는 복잡한 레이아웃을 간편하게 만들 수 있도록 도와준다.(유튜브, 인스타그램)
+        크기와 위치를 동적으로 조절 가능하다.
+        (즉, 핸드폰 사이즈던 모니터 사이즈던 자동으로 줄어들고 늘어난다.)
+        이를 통해 다양한 디바이스(핸드폰)와 화면 크기에 맞춰 레이아웃을 만들 수 있다.
+
+     -->
+
+    <div class="container">
+      <div>
+        1
+        <img src="fire-pig.gif" alt="" />
+      </div>
+      <div>
+        2
+        <img src="iron-pig.gif" alt="" />
+      </div>
+      <div>
+        3
+        <img src="pig.gif" alt="" />
+      </div>
+      <div>
+        4
+        <img src="rebon-pig.gif" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

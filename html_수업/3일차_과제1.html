@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 1000px;
+        height: 400px;
+        background-color: #ccc;
+        margin: 10px;
+        padding-left: 60px;
+        display: flex;
+        position: relative;
+      }
+      .card {
+        width: 300px;
+        height: 350px;
+        color: #fff;
+        position: absolute;
+        padding-left: 10px;
+        margin-top: 30px;
+        flex: auto;
+      }
+      .card:nth-child(4) {
+        background-color: #283491;
+        left: 50px;
+      }
+      .card:nth-child(2) {
+        background-color: #f18684;
+        left: 350px;
+      }
+      .card:nth-child(3) {
+        background-color: #6ee2f1;
+        right: 50px;
+      }
+      h2 {
+        font-size: 20px;
+        font-weight: 600;
+      }
+      h4 {
+        font-size: 20px;
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>div.container</h2>
+      <div class="card">
+        <h4>div.card</h4>
+      </div>
+      <div class="card">
+        <h4>div.card</h4>
+      </div>
+      <div class="card">
+        <h4>div.card</h4>
+      </div>
+    </div>
+  </body>
+</html>
