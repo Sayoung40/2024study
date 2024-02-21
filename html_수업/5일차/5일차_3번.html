@@ -11,51 +11,56 @@
         box-sizing: border-box;
       }
       .container {
-        display: flex;
-        flex-direction: column;
         width: 1200px;
         height: 800px;
+        display: flex;
+        flex-direction: row;
       }
-
+      .nav {
+        background-color: #d7e8d4;
+        width: 20%;
+        height: 100vh;
+      }
+      .a {
+        width: 80%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
       .header {
         width: 100%;
         height: 15%;
         background-color: yellowgreen;
       }
       .article {
-        width: 1200px;
+        width: 100%;
         height: 70%;
-        background-color: #fff;
+        background-color: rgb(255, 255, 255);
         display: flex;
-        flex-direction: row-reverse;
+        justify-content: flex-end;
       }
       .aside {
-        width: 15%;
+        width: 20%;
         height: 100%;
         background-color: beige;
       }
-      .nav {
-        width: 15%;
-        height: 100%;
-        background-color: #d7e8d4;
-      }
-
       .footer {
         width: 100%;
         height: 15%;
         background-color: yellowgreen;
-        bottom: 0;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="header"></div>
-      <div class="article">
-        <div class="aside"></div>
-        <div class="nav"></div>
+      <div class="nav"></div>
+      <div class="a">
+        <div class="header"></div>
+        <div class="article">
+          <div class="aside"></div>
+        </div>
+        <div class="footer"></div>
       </div>
-      <div class="footer"></div>
     </div>
   </body>
 </html>
