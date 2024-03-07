@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .tour {
+        /* position: relative; */
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .header {
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        align-items: center;
+      }
+      .logo {
+        border: 1px solid black;
+      }
+      .logo h4 {
+        margin: auto;
+        align-items: center;
+      }
+      .menu {
+        display: flex;
+        padding: 10px;
+      }
+      .menu ul {
+        border: 1px solid black;
+        display: flex;
+        padding: 8px 12px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .menu ul li {
+        list-style: none;
+        border: 1px solid black;
+        margin: 5px 15px;
+        /* display: flex; */
+        /* justify-content: space-between; */
+      }
+      .hero {
+        /* position: absolute; */
+        border: 1px solid black;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 880px;
+        margin: auto;
+        padding: 10px;
+      }
+      .hero h1 {
+        border: 1px solid black;
+        font-size: 25px;
+        margin: 20px auto;
+      }
+      .hero h2 {
+        border: 1px solid black;
+        font-size: 50px;
+        margin: 20px auto;
+      }
+      .hero a {
+        text-decoration: none;
+        color: white;
+        padding: 6px;
+        border: 1px solid black;
+        background-color: #fc036b;
+        border-radius: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tour">
+      <div class="header">
+        <div class="logo">
+          <h4>ADVENTURE</h4>
+        </div>
+        <div class="menu">
+          <ul>
+            <li>Home</li>
+            <li>Tours</li>
+            <li>Explore</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
+      <div class="hero">
+        <h1>Explore The Colorful World</h1>
+        <h2>A WONDERFUL GIFT</h2>
+        <a href="">Learn More</a>
+      </div>
+    </div>
+  </body>
+</html>
