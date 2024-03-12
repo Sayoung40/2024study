@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- index: home or main 화면 -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      header {
+        height: 90vh;
+        width: 100%;
+        position: relative;
+        /* 이미지를 넣는 방법
+        1. img 태그 사용
+        2. css를 활용해서 태그에 직접 이미지 삽입 */
+        background-image: linear-gradient(
+            rgba(4, 10, 20, 0.8),
+            rgba(4, 10, 20, 0.8)
+          ),
+          url(background.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      nav {
+        display: flex;
+        padding: 2% 6%;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .img-logo {
+        width: 150px;
+        height: 100px;
+        background-color: white;
+        border-radius: 100%;
+      }
+      .img-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      ul li {
+        list-style: none;
+        padding: 8px 12px;
+      }
+      .nav-links ul {
+        display: flex;
+      }
+      ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+      }
+      ul li:hover {
+        background-color: #f44336;
+        border-radius: 4px;
+        transition: 700ms;
+      }
+      .text-box {
+        width: 90%;
+        position: absolute;
+        color: #fff;
+        top: 40%;
+        left: 5%;
+        text-align: center;
+      }
+      .text-box h1 {
+        font-size: 62px;
+      }
+      .text-box p {
+        font-size: 16px;
+        margin: 10px 0 40px;
+      }
+      .text-box a {
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid #fff;
+        font-size: 18px;
+        padding: 12px 34px;
+        margin-top: 2%;
+      }
+      .text-box a:hover {
+        border: 1px solid #f44336;
+        background-color: #f44336;
+        transition: 1s;
+      }
+      .gallery {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 100px;
+      }
+      .gallery h1 {
+        font-size: 36px;
+        font-weight: 600;
+      }
+      .gallery p {
+        font-size: 16px;
+        color: #777;
+        padding: 10px;
+      }
+      .row {
+        display: flex;
+        margin-top: 2%;
+        justify-content: space-between;
+      }
+      .gallery-col {
+        /* flex basis 아이템 기본 크기 설정 */
+        flex-basis: 24%;
+        position: relative;
+        margin-bottom: 5%;
+      }
+      .gallery-col .img-box {
+        width: 400px;
+        height: 220px;
+      }
+      .img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .layer {
+        position: absolute;
+        bottom: 45%;
+        left: 30%;
+      }
+      .layer h3 {
+        font-size: 20px;
+        color: rgba(46, 49, 49, 1);
+      }
+      .programs {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 80px;
+        padding-bottom: 50px;
+        background-color: rgba(232, 232, 232, 0.5);
+      }
+      .programs h1 {
+        font-size: 36px;
+        font-weight: 600;
+      }
+      .programs-data {
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0 3px 7px grey;
+      }
+      .programs p {
+        padding: 10px;
+        font-size: 16px;
+        color: #777;
+      }
+      tr {
+        border: 1px solid #444444;
+      }
+      thead {
+        box-shadow: 0 1px 5px gray;
+      }
+      th {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        font-weight: 900;
+        text-align: center;
+      }
+
+      td {
+        padding: 1rem 2rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <!-- header는 div.header와 같은 의미.
+header와 같은 태그를 '시맨틱 태그'라고 함
+ nav == div.nav (네비게이션)-->
+  <body>
+    <header>
+      <nav>
+        <a href="">
+          <div class="img-logo">
+            <img src="logo.png" alt="" />
+          </div>
+
+          <div class="nav-links">
+            <ul>
+              <li><a href="">HOME</a></li>
+              <li><a href="">ABOUT</a></li>
+              <li><a href="">PROGRAMS</a></li>
+              <li><a href="">FACILITIES</a></li>
+              <li><a href="">CONTACT</a></li>
+            </ul>
+          </div>
+        </a>
+      </nav>
+      <!-- text box -->
+      <div class="text-box">
+        <h1>Coffee one day class</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nobis,
+          aspernatur debitis corrupti rem iste reprehenderit, aliquam
+          dignissimos, nisi vero in quae sunt obcaecati! Quo optio nostrum
+          voluptatem nemo fugiat.
+        </p>
+        <a href="">PROGRAMS CHECK</a>
+      </div>
+    </header>
+    <div class="gallery">
+      <h1>COFFEE CLASS</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi molestiae
+        modi vel. Accusantium dolorem, illo minus, quos, id illum expedita nihil
+        vero ipsam facilis quisquam cum? Deserunt odit pariatur nam?
+      </p>
+      <div class="row">
+        <div class="gallery-col">
+          <div class="img-box"><img src="" alt="" /></div>
+          <div class="layer">
+            <h3>LATTE ART</h3>
+          </div>
+        </div>
+        <div class="gallery-col">
+          <div class="img-box"><img src="" alt="" /></div>
+          <div class="layer">
+            <h3>BASIC BARISTA</h3>
+          </div>
+        </div>
+        <div class="gallery-col">
+          <div class="img-box"><img src="" alt="" /></div>
+          <div class="layer">
+            <h3>CUSTOMER SERVICE</h3>
+          </div>
+        </div>
+        <div class="gallery-col">
+          <div class="img-box"><img src="" alt="" /></div>
+          <div class="layer">
+            <h3>MENU DEVELOPMENT</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- programs -->
+    <div class="programs">
+      <h1>COFFEE PROGRAMS</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et magni
+        cupiditate quaerat earum nobis delectus ad esse sunt, odio voluptatum
+        quasi iste reprehenderit velit dolores tenetur sint a pariatur. Eius?
+      </p>
+      <table class="programs-data">
+        <!-- thead : table head -->
+        <thead>
+          <!-- tr: table row(행) -->
+          <tr>
+            <!-- th : 열 -->
+            <th>TIME</th>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+            <th>SAT</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>11:00 ~ 12:00</td>
+            <td>SUPER BARISTA</td>
+            <td>-</td>
+            <td>SUPER BARISTA</td>
+            <td>-</td>
+            <td>SUPER BARISTA</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
