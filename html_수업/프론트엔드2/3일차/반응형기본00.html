@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: tan;
+        color: red;
+      }
+      /* if문
+      max-width: 최대 크기가 992px일 때 실행
+      @: 어노테이션(java에서 많이 사용) */
+      @media screen and (max-width: 992px) {
+        body {
+          background-color: blue;
+          color: white;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        body {
+          background-color: olive;
+          color: white;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 반응형이란
+    여러 디바이스에서 웹사이트를 볼때
+    각 디바이스 사이즈에 맞게 사이트를 자동으로 배치할 수 있다. -->
+    <h1>Resize the brawser window to see the effect!</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+      aspernatur assumenda totam consequatur veritatis aut sed. Ratione dolore
+      quam doloribus repellat asperiores aperiam officiis! Harum quidem ex
+      minima? Ab, placeat!
+    </p>
+  </body>
+</html>

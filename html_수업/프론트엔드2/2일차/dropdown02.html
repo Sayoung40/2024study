@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      section {
+        background-color: #f2f4f3;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* padding: 50% 0; */
+      }
+      /* id는 #
+      class는 . */
+      #main-nav a {
+        background-color: #254441;
+        height: 64px;
+        font-weight: bold;
+        color: #f6f7f8;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #main-nav ul {
+        list-style: none;
+        display: flex;
+      }
+      #main-nav li {
+        width: 100%;
+        text-align: center;
+        position: relative;
+      }
+      #main-nav a:hover {
+        background-color: #305753;
+      }
+      .submenu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+      }
+      .submenu li {
+        display: none;
+        position: relative;
+      }
+      #main-nav li:hover .submenu > li {
+        display: block;
+      }
+      .sub-submenu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 100%;
+        width: 100%;
+        top: 0px;
+      }
+
+      #main-nav .submenu li:hover .sub-submenu > li {
+        display: block;
+      }
+
+      .arrow {
+        color: #eee;
+        font-size: 12px;
+        margin-left: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- flexbox를 이용해서 dropdown 메뉴 구현하기
+    class 이름은 중복이 가능.
+    id 이름은 중복이 불가능. (고유한 값) 
+    nav(navigation) : 시맨틱 태그-->
+
+    <nav id="main-nav">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li>
+          <a href=""
+            >Services
+            <!-- span태그는 특별한 의미 없음.
+            시각적 효과를 나타낼 때 사용한다.
+            span으로 레이아웃을 구성하는데 사용하지 않는다. 
+            문자형 기호-->
+            <span class="arrow">&#x25BC;</span>
+          </a>
+          <!-- 하위 메뉴 -->
+          <ul class="submenu">
+            <li><a href="">국민소통</a></li>
+            <li><a href="">규제혁신</a></li>
+            <li>
+              <a href="">적극행정 <span class="arrow">&#x25B6;</span></a>
+              <ul class="sub-submenu">
+                <li><a href="">제도소개</a></li>
+                <li><a href="">소극행정 신고</a></li>
+                <li><a href="">적극행정 자료실</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="">Downloads</a></li>
+        <li>
+          <a href=""
+            >FAQs
+            <span class="arrow">&#x25BC;</span>
+          </a>
+          <ul class="submenu">
+            <li><a href="">Android</a></li>
+            <li><a href="">iOS</a></li>
+          </ul>
+        </li>
+        <li><a href="">About</a></li>
+      </ul>
+    </nav>
+    <!-- section : 시맨틱 태그 중 한개
+    div.section하고 같음. -->
+    <section>
+      <h1>Hi, My name is Dobby!</h1>
+    </section>
+  </body>
+</html>
